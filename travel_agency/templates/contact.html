@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact | tisa.com{% endblock %}
+
+{% block page_styles %}
+<link href="../static/contact/css/contact.css" rel="stylesheet" />{% endblock %}
+
+{% block content %}
+
+<section class="zoom">
+  <img src="../static/contact/images/mountain1.png" id="layer1" alt="" />
+  <img src="../static/contact/images/mountain2.png" id="layer2" alt="" />
+  <img src="../static/contact/images/text.png" id="text" alt="" />
+</section>
+<section class="form-section">
+  <div class="form">
+    <h6 class="regis">
+      We will contact you within 3 work-days after registration is
+      complete
+    </h6>
+    <form action="">
+      <div class="input-box">
+        <input type="text" required />
+        <label for="">Username</label>
+      </div>
+      <div class="input-box">
+        <input class="tel" type="tel" required />
+        <p class="plus">+</p>
+        <label for="">Phone</label>
+      </div>
+      <div class="input-box">
+        <input type="password" required />
+        <label for="">Password</label>
+      </div>
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block page_scripts %}<script src="../static/contact/js/contact.js"></script>{% endblock %}

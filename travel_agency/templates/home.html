@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}TISA Official Site | Travel Deals and Promotions{% endblock %}
+
+{% block page_styles %}
+<link href="../static/home/css/home.css" rel="stylesheet" />{% endblock %}
+
+{% block content %}
+
+<div class="slider">
+  <ul>
+    {% for slide in slides %}
+    <li>
+      <input type="radio" name="slide" id="r{{ forloop.counter }}" /><label for="r{{ forloop.counter }}"></label>
+      <div class="slide">
+        <img src="{{ slide.image.url }}" alt="" />
+        <div class="calling">
+          <h6>
+            {{ slide.title }}
+          </h6>
+          <p>
+            {{ slide.summary }}
+          </p>
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% endblock %}
+
+{% block page_scripts %}<script src="../static/home/js/home.js"></script>{% endblock %}
