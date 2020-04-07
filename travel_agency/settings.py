@@ -26,9 +26,9 @@ sys.path.insert(0, os.path.join(PROJECT_ROOT, 'apps'))
 SECRET_KEY = ')!&y#or17u!9-6s&k$z=b+(^nql%0095fz2jjezwj0=+=2xr&k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['isultan.pythonanywhere.com']
+ALLOWED_HOSTS = ['']
 
 
 # Application definition
