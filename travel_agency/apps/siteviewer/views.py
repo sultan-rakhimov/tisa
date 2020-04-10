@@ -8,20 +8,20 @@ def home(request):
     context = {
         'slides': slides
     }
-    return render(request, 'home.html', context)
+    return render(request, 'siteviewer/home.html', context)
 
 
 def contact(request):
-    return render(request, 'contact.html')
+    return render(request, 'siteviewer/contact.html')
 
 
 def about(request):
-    return render(request, 'about.html')
+    return render(request, 'siteviewer/about.html')
 
 
 def news(request):
-    return render(request, 'news.html')
+    return render(request, 'siteviewer/news.html')
 
 
 def tours(request):
-    return render(request, 'tours.html')
+    return render(request, 'siteviewer/tours.html')

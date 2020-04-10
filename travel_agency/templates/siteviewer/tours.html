@@ -1,0 +1,22 @@
+{% extends 'siteviewer/base.html' %}
+
+{% block title %}Informative and Cheap Tours | tisa.com{% endblock %}
+
+{% block page_styles %}
+<link href="../../static/tours/css/tours.css" rel="stylesheet" />{% endblock %}
+
+{% block content %}
+
+<div id="three-container"></div>
+
+{% endblock %}
+
+{% block page_scripts %}
+
+<script src="../../static/tours/js/tours.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/bas.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/OrbitControls-2.js"></script>
+
+{% endblock %}

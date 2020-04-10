@@ -1,0 +1,11 @@
+#three-container {
+  transform: translate(0, 75px);
+}
+
+.footer {
+  top: 1000px;
+}
+
+canvas {
+  background-image: radial-gradient(#666, #333);
+}
