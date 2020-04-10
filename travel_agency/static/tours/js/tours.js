@@ -12,10 +12,10 @@ function init() {
     root.renderer.setPixelRatio(window.devicePixelRatio || 1);
     root.camera.position.set(0, 0, 60);
 
-    var width = 170;
-    var height = 100;
+    var width = 100;
+    var height = 60;
 
-    var slide = new Slide(width, height, 'in');
+    var slide = new Slide(width, height, 'out');
     var l1 = new THREE.ImageLoader();
     l1.setCrossOrigin('Anonymous');
     l1.load('https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/winter.jpg', function (img) {
@@ -26,7 +26,7 @@ function init() {
     var slide2 = new Slide(width, height, 'in');
     var l2 = new THREE.ImageLoader();
     l2.setCrossOrigin('Anonymous');
-    l2.load('https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/winter.jpg', function (img) {
+    l2.load('https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/spring.jpg', function (img) {
         slide2.setImage(img);
     })
 
@@ -40,7 +40,6 @@ function init() {
 
     tl.add(slide.transition(), 0);
     tl.add(slide2.transition(), 0);
-    tl.add(slide3.transition(), 0);
 
     createTweenScrubber(tl);
 
@@ -96,7 +95,6 @@ function Slide(width, height, animationPhase) {
 
         return tempPoint;
     }
-
 
     function getControlPoint1(centroid) {
         var signY = Math.sign(centroid.y);
