@@ -1,5 +1,5 @@
 window.onload = init;
-console.ward = function () {}; // what warnings?
+console.ward = function () { }; // what warnings?
 
 function init() {
   var root = new THREERoot({
@@ -12,14 +12,13 @@ function init() {
   root.renderer.setPixelRatio(window.devicePixelRatio || 1);
   root.camera.position.set(0, 0, 60);
 
-  var width = 100;
-  var height = 60;
+  var width = 150;
+  var height = 90;
 
   var slide = new Slide(width, height, "out");
   var l1 = new THREE.ImageLoader();
   l1.setCrossOrigin("Anonymous");
-  l1.load(
-    "https://raw.githubusercontent.com/scriptonofficial/3D-Image-Transition-Project-Files/master/images/winter.jpg",
+  l1.load("https://raw.githubusercontent.com/sultan-rakhimov/travel_agency/master/travel_agency/static/tours/images/Arctic.jpg",
     function (img) {
       slide.setImage(img);
     }
@@ -30,7 +29,7 @@ function init() {
   var l2 = new THREE.ImageLoader();
   l2.setCrossOrigin("Anonymous");
   l2.load(
-    "https://raw.githubusercontent.com/scriptonofficial/3D-Image-Transition-Project-Files/master/images/spring.png",
+    "https://raw.githubusercontent.com/sultan-rakhimov/travel_agency/master/travel_agency/static/tours/images/Maldives.jpg",
     function (img) {
       slide2.setImage(img);
     }
