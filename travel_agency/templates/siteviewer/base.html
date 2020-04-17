@@ -1,78 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-{% load static %}
+  {% load static %}
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" href="{% static 'base/images/tisa.ico' %}" />
-  <title>{% block title %}Title{% endblock %}</title>
-  <link href="{% static 'base/font-awesome/all.min.css' %}" rel="stylesheet" />
-  <link href="{% static 'base/css/base.css' %}" rel="stylesheet" />
-  {% block page_styles %}{% endblock %}
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="{% static 'base/images/tisa.ico' %}" />
+    <title>{% block title %}Title{% endblock %}</title>
+    <link
+      href="{% static 'base/font-awesome/all.min.css' %}"
+      rel="stylesheet"
+    />
+    <link href="{% static 'base/css/base.css' %}" rel="stylesheet" />
+    {% block page_styles %}{% endblock %}
+  </head>
 
-<body>
-  <nav class="menu-activea">
-    <i class="fas fa-bars"></i>
-    <div class="rainbow">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <div class="logo">
-      <span>t</span>
-    </div>
-    <ul>
-      <li><a href="{% url 'home' %}" data-text="HOME">HOME</a></li>
-      <li><a href="{% url 'tours' %}" data-text="TOURS">TOURS</a></li>
-      <li><a href="{% url 'news' %}" data-text="NEWS">NEWS</a></li>
-      <li><a href="{% url 'about' %}" data-text="ABOUT">ABOUT</a></li>
-      <li><a href="{% url 'contact' %}" data-text="CONTACT">CONTACT</a></li>
-    </ul>
-  </nav>
-  <main>
-    <header>
-      <h1>tisa<span>.</span>com</h1>
-      <div class="faq"><a href="#">FAQ</a></div>
-      <input size="30" type="search" name="" class="search" placeholder="Destinations, hotels, flights, etc" />
-      <i class="fas fa-search"></i>
-      <a target="_blank" href="https://www.google.com/earth/"><i title="See your place beforehand"
-          class="fas fa-globe-europe"></i></a>
-      <a target="_blank" href="https://play.google.com/store/apps/details?id=com.tisaapp&hl=en"><i
-          title="Download the App for Free" class="fas fa-mobile-alt"></i></a>
-    </header>
-    {% block content %} Content of the page {% endblock %}
-    <footer class="footer">
-      <a href="#" class="agreement1">User Agreement</a>
-      <a href="#" class="agreement2">Terms of privacy</a>
-      <ul class="soc-ic">
-        <li>
-          <a target="_blank" href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
-        </li>
-        <li>
-          <a target="_blank" href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-        </li>
-        <li>
-          <a target="_blank" href="https://aboutme.google.com"><i class="fab fa-google-plus-g"></i></a>
-        </li>
-        <li>
-          <a target="_blank" href="https://telegram.org"><i class="fab fa-telegram-plane"></i></a>
-        </li>
-        <li>
-          <a target="_blank" href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
-        </li>
-      </ul>
-      <p class="copyright">&copy 2020 SULTAN</p>
-      <div class="ad">
-        <a href="https://www.upwork.com/o/profiles/users/~01c0a49808bc045599/" target="_blank">Click Here to Visit
-          <span>Upwork</span> Profile of this Website's Creator</a>
+  <body>
+    <nav class="menu-activea">
+      <i class="fas fa-bars"></i>
+      <div class="rainbow">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-    </footer>
-  </main>
-  <script src="{% static 'base/js/jquery.js' %}"></script>
-  <script src="{% static 'base/js/base.js' %}"></script>
-  {% block page_scripts %}{% endblock %}
-</body>
-
+      <div class="logo">
+        <span>t</span>
+      </div>
+      <ul>
+        <li><a href="{% url 'home' %}" data-text="HOME">HOME</a></li>
+        <li><a href="{% url 'tours' %}" data-text="TOURS">TOURS</a></li>
+        <li><a href="{% url 'news' %}" data-text="NEWS">NEWS</a></li>
+        <li><a href="{% url 'about' %}" data-text="ABOUT">ABOUT</a></li>
+        <li><a href="{% url 'contact' %}" data-text="CONTACT">CONTACT</a></li>
+      </ul>
+    </nav>
+    <main>
+      <header>
+        <h1>tisa<span>.</span>com</h1>
+        <div class="faq"><a href="#">FAQ</a></div>
+        <input
+          size="30"
+          type="search"
+          name=""
+          class="search"
+          placeholder="Destinations, hotels, flights, etc"
+        />
+        <i class="fas fa-search"></i>
+        <a target="_blank" href="https://www.google.com/earth/"
+          ><i title="See your place beforehand" class="fas fa-globe-europe"></i
+        ></a>
+        <a
+          target="_blank"
+          href="https://play.google.com/store/apps/details?id=com.tisaapp&hl=en"
+          ><i title="Download the App for Free" class="fas fa-mobile-alt"></i
+        ></a>
+      </header>
+      {% block content %} Content of the page {% endblock %}
+      <footer class="footer">
+        <a href="#" class="agreement1">User Agreement</a>
+        <a href="#" class="agreement2">Terms of privacy</a>
+        <ul class="soc-ic">
+          <li>
+            <a target="_blank" href="https://www.facebook.com"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+          </li>
+          <li>
+            <a target="_blank" href="https://twitter.com"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a target="_blank" href="https://aboutme.google.com"
+              ><i class="fab fa-google-plus-g"></i
+            ></a>
+          </li>
+          <li>
+            <a target="_blank" href="https://telegram.org"
+              ><i class="fab fa-telegram-plane"></i
+            ></a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.instagram.com"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </li>
+        </ul>
+        <p class="copyright">&copy 2020 SULTAN</p>
+        <div class="ad">
+          <a
+            href="https://www.upwork.com/o/profiles/users/~01c0a49808bc045599/"
+            target="_blank"
+            >Click Here to Visit <span>Upwork</span> Profile of this Website's
+            Creator</a
+          >
+        </div>
+      </footer>
+    </main>
+    <script src="{% static 'base/js/jquery.js' %}"></script>
+    <script src="{% static 'base/js/base.js' %}"></script>
+    {% block page_scripts %}{% endblock %}
+  </body>
 </html>
