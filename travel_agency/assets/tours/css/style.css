@@ -1,0 +1,10 @@
+canvas {
+  background-color: white;
+  position: absolute;
+  top: 1000px;
+}
+
+.footer {
+  position: absolute;
+  top: 1700px;
+}

@@ -9,8 +9,9 @@
 }
 
 html,
-body {
+#body {
   height: 100vh;
+  margin: 0;
 }
 
 * {
@@ -19,7 +20,7 @@ body {
   padding: 0;
 }
 
-body {
+#body {
   perspective-origin: 0% 50%;
   perspective: 800px;
 }
@@ -30,12 +31,12 @@ body {
 
 /* ------------------------------------------------------------------------------------------ */
 
-nav,
-main {
+#nav,
+#main {
   transition: transform 150ms ease-out;
 }
 
-nav {
+#nav {
   z-index: 10;
   padding-top: 10px;
   position: relative;
@@ -47,11 +48,11 @@ nav {
   transform: translateX(-16em);
 }
 
-nav.menu-active {
+#nav.menu-active {
   transform: translateX(0);
 }
 
-nav.menu-hover {
+#nav.menu-hover {
   transform: translateX(-15.5em);
 }
 
@@ -155,18 +156,18 @@ nav.menu-hover {
   filter: blur(50px);
 }
 
-nav ul {
+#nav ul {
   list-style: none;
   margin: 4em 10px;
   text-align: center;
 }
 
-nav ul li {
+#nav ul li {
   position: relative;
   margin: 10px 0;
 }
 
-nav ul li a {
+#nav ul li a {
   position: relative;
   display: block;
   text-decoration: none;
@@ -176,7 +177,7 @@ nav ul li a {
   color: rgb(70, 119, 184);
 }
 
-nav ul li a::before {
+#nav ul li a::before {
   content: attr(data-text);
   position: absolute;
   top: 0;
@@ -192,7 +193,7 @@ nav ul li a::before {
   opacity: 0;
 }
 
-nav ul li a:hover::before {
+#nav ul li a:hover::before {
   opacity: 1;
   color: rgba(255, 255, 255, 0.1);
 }
@@ -205,8 +206,10 @@ nav ul li a:hover::before {
     background-position: 200px;
   }
 }
+
 /* ----------------------------------------------------------------------------------- */
-main {
+
+#main {
   z-index: 0;
   position: absolute;
   top: 0;
@@ -217,7 +220,7 @@ main {
   overflow-x: hidden;
 }
 
-main:after {
+#main:after {
   content: "";
   display: block;
   position: absolute;
@@ -232,22 +235,24 @@ main:after {
   transition: opacity 150ms ease-out, visibility 0s 150ms;
 }
 
-main.menu-active {
+#main.menu-active {
   transform: translateX(16em) rotateY(15deg);
   overflow: hidden;
 }
 
-main.menu-active:after {
+#main.menu-active:after {
   visibility: visible;
   opacity: 1;
   transition: opacity 150ms ease-out, visibility 0s;
 }
 
-main.menu-hover {
+#main.menu-hover {
   transform: translateX(0.5em);
 }
+
 /* ------------------------------------------------------------------------------------------------- */
-h1 {
+
+#h1 {
   font-family: cute;
   font-size: 4em;
   background: linear-gradient(to right, rgb(66, 195, 255), rgb(40, 72, 216));
@@ -260,7 +265,7 @@ h1 {
   top: -5px;
 }
 
-h1 span {
+#h1 span {
   background: orangered;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;

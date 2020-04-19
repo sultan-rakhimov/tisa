@@ -3,31 +3,40 @@
 {% block title %}TISA Official Site | Travel Deals and Promotions{% endblock %}
 
 {% block page_styles %}
-<link href="../../static/home/css/home.css" rel="stylesheet" />{% endblock %}
+
+<link rel="stylesheet" href="../../static/home/css/swiper.min.css">
+<link rel="stylesheet" href="../../static/home/css/home.css" />
+
+{% endblock %}
 
 {% block content %}
 
-<div class="slider">
-  <ul>
-    {% for slide in slides %}
-    <li>
-      <input type="radio" name="slide" id="r{{ forloop.counter }}" /><label for="r{{ forloop.counter }}"></label>
-      <div class="slide">
-        <img src="{{ slide.image.url }}" alt="" />
-        <div class="calling">
-          <h6>
-            {{ slide.title }}
-          </h6>
-          <p>
-            {{ slide.summary }}
-          </p>
+<div id="slider">
+  <div class="swiper-container parallax-slider">
+    <div class="swiper-wrapper">
+      {% for slide in slides %}
+      <div class="swiper-slide">
+        <img src="{{ slide.image.url }}" class="slide_image" alt="">
+        <div class="slide_content">
+          <h3 class="slide_title">{{ slide.title }}</h3>
+          <div>
+            <p class="slide_description">{{ slide.summary }}</p>
+          </div>
         </div>
       </div>
-    </li>
-    {% endfor %}
-  </ul>
+      {% endfor %}
+    </div>
+    <div class="swiper-button-next swiper-nav-ctrl next-ctrl"><i class="fas fa-chevron-right"></i></div>
+    <div class="swiper-button-prev swiper-nav-ctrl prev-ctrl"><i class="fas fa-chevron-left"></i></div>
+    <div class="swiper-pagination pagination-ctrl"></div>
+  </div>
 </div>
 
 {% endblock %}
 
-{% block page_scripts %}<script src="../../static/home/js/home.js"></script>{% endblock %}
+{% block page_scripts %}
+
+<script src="../../static/home/js/swiper.min.js"></script>
+<script src="../../static/home/js/home.js"></script>
+
+{% endblock %}
