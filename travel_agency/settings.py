@@ -36,6 +36,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # third-party
     'grappelli',
+    'phone_field',
     # native
     'django.contrib.admin',
     'django.contrib.auth',

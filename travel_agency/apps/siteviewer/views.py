@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from siteviewer.models import Slide
+#from .forms import ContactInfo
 
 
 def home(request):

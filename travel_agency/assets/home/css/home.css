@@ -1,6 +1,6 @@
 .footer {
     position: absolute;
-    top: 1000px;
+    top: 2000px;
 }
 
 /* ------------------------------------------------------------------------------------ */
@@ -105,3 +105,26 @@
 }
 
 /* ------------------------------------------------------------------------------------- */
+
+canvas {
+  background-color: white;
+  position: absolute;
+  top: 860px;
+}
+
+.main_ad {
+  position: absolute;
+  top: 800px;
+  width: 100px;
+  height: 505px;
+}
+
+.ma1 {
+  left: 15px;
+  background: #fded3d;
+}
+
+.ma2 {
+  right: 15px;
+  background: #5dc5e7;
+}
