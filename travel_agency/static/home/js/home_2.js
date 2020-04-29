@@ -18,7 +18,7 @@ function init() {
     var slide = new Slide(width, height, "out");
     var l1 = new THREE.ImageLoader();
     l1.setCrossOrigin("Anonymous");
-    l1.load("https://raw.githubusercontent.com/sultan-rakhimov/travel_agency/master/travel_agency/static/tours/images/Arctic.jpg",
+    l1.load("https://raw.githubusercontent.com/sultan-rakhimov/travel_agency/master/travel_agency/static/home/images/Arctic.jpg",
         function (img) {
             slide.setImage(img);
         }
@@ -29,7 +29,7 @@ function init() {
     var l2 = new THREE.ImageLoader();
     l2.setCrossOrigin("Anonymous");
     l2.load(
-        "https://raw.githubusercontent.com/sultan-rakhimov/travel_agency/master/travel_agency/static/tours/images/Maldives.jpg",
+        "https://raw.githubusercontent.com/sultan-rakhimov/travel_agency/master/travel_agency/static/home/images/Maldives.jpg",
         function (img) {
             slide2.setImage(img);
         }

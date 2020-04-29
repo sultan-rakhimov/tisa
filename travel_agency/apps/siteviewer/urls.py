@@ -7,4 +7,5 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('tours/', views.tours, name='tours'),
     path('news/', views.news, name='news'),
+    path(r'^(?P<slug>[\w-]+)/$', views.slide_detail, name='slide_detail'),
 ]

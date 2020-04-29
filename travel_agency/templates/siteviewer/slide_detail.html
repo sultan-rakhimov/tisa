@@ -1,0 +1,11 @@
+{% extends 'siteviewer/base.html' %}
+
+{% block title %} {{ slide.title }} {% endblock %}
+
+{% block content %}
+
+<h1>{{ title }}</h1>
+<p>{{ summary }}</p>
+<img src="{{ image.url }}" alt="">
+
+{% endblock %}

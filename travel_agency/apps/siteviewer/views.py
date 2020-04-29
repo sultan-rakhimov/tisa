@@ -26,3 +26,10 @@ def news(request):
 
 def tours(request):
     return render(request, 'siteviewer/tours.html')
+
+
+def slide_detail(request):
+    context = {
+        'image': Slide.image
+    }
+    return render(request, "slide_detail.html", context)

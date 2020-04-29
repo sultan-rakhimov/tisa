@@ -8,7 +8,7 @@ class Slide(models.Model):
     title = models.CharField('Title', max_length=150)
     slug = models.SlugField('URL', max_length=150, unique=True)
     summary = models.TextField('Summary', db_index=True, max_length=500)
-    date = models.DateTimeField('Date', default=timezone.now())
+    date = models.DateTimeField('Date', auto_now_add=True)
     image = models.ImageField('Image')
 
     def get_absolute_url(self):
