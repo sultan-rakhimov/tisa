@@ -23,3 +23,13 @@ document.addEventListener("scroll", function (e) {
     layer2.style.width = 100 + scroll / 5 + "%";
     text.style.top = -scroll / 20 + "%";
 });
+
+// --------------------------------------------------------------------------
+
+var element = document.getElementById('phone');
+var maskOptions = {
+    mask: '0(000)000-00-00'
+};
+var mask = IMask(element, maskOptions);
+
+// ----------------------------------------------------------------------------

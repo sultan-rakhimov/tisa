@@ -20,3 +20,19 @@ class Slide(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Customer(models.Model):
+    first_name = models.CharField("First Name", max_length=20)
+    last_name = models.CharField("Last Name", max_length=20)
+    email = models.EmailField('E-mail', db_index=True)
+    phone = models.CharField('Phone', max_length=15)
+    date = models.DateTimeField('Date', auto_now_add=True)
+
+    class Meta:
+        verbose_name = 'Customer'
+        verbose_name_plural = 'Customers'
+
+    def __str__(self):
+        customer = self.first_name + ' ' + self.last_name
+        return customer

@@ -1,7 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
 from django.http import HttpResponse
-from siteviewer.models import Slide
-#from .forms import ContactInfo
+from siteviewer.models import Slide, Customer
 
 
 def home(request):
@@ -28,8 +27,8 @@ def tours(request):
     return render(request, 'siteviewer/tours.html')
 
 
-def slide_detail(request):
-    context = {
-        'image': Slide.image
-    }
-    return render(request, "slide_detail.html", context)
+def customer(request):
+    if request.method == 'POST':
+        Customer.objects.create(first_name=request.POST.get(
+            'first_name'), last_name=request.POST.get('last_name'), email=request.POST.get('email'), phone=request.POST.get('phone'))
+        return redirect(reverse('contact'))
