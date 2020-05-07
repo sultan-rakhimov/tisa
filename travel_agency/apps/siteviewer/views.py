@@ -5,10 +5,7 @@ from siteviewer.models import Slide, Customer
 
 def home(request):
     slides = Slide.objects.all()
-    context = {
-        'slides': slides
-    }
-    return render(request, 'siteviewer/home.html', context)
+    return render(request, 'siteviewer/home.html', {'slides': slides})
 
 
 def contact(request):
