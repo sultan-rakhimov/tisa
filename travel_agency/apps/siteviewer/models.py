@@ -6,7 +6,7 @@ from django.shortcuts import reverse
 
 class Slide(models.Model):
     title = models.CharField('Title', max_length=150)
-    slug = models.SlugField('URL', max_length=150, unique=True)
+    slug = models.SlugField('URL', unique=True)
     summary = models.TextField('Summary', db_index=True, max_length=500)
     date = models.DateTimeField('Date', auto_now_add=True)
     image = models.ImageField('Image')
