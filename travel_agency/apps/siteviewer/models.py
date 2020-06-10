@@ -23,8 +23,7 @@ class Slide(models.Model):
 
 
 class Customer(models.Model):
-    first_name = models.CharField("First Name", max_length=20)
-    last_name = models.CharField("Last Name", max_length=20)
+    full_name = models.CharField("Full Name", max_length=50)
     email = models.EmailField('E-mail', db_index=True)
     phone = models.CharField('Phone', max_length=15)
     date = models.DateTimeField('Date', auto_now_add=True)
@@ -34,5 +33,30 @@ class Customer(models.Model):
         verbose_name_plural = 'Customers'
 
     def __str__(self):
-        customer = self.first_name + ' ' + self.last_name
-        return customer
+        return self.full_name
+
+
+class Country(models.Model):
+    title = models.CharField('Title', max_length=255, unique=True)
+    flag = models.ImageField('Flag')
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Country'
+        verbose_name_plural = 'Countries'
+
+
+class Tour(models.Model):
+    title = models.CharField('Title', max_length=255)
+    country = models.ForeignKey(Country, on_delete=models.CASCADE)
+    description = models.TextField('Description', max_length=1000)
+    image = models.ImageField('Image')
+
+    class Meta:
+        verbose_name = 'Tour'
+        verbose_name_plural = 'Tours'
+
+    def __str__(self):
+        return self.title

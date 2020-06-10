@@ -28,7 +28,7 @@ document.addEventListener("scroll", function (e) {
 
 var element = document.getElementById('phone');
 var maskOptions = {
-    mask: '0(000)000-00-00'
+    mask: '0 (000) 000-00-00'
 };
 var mask = IMask(element, maskOptions);
 

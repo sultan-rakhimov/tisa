@@ -44,6 +44,7 @@ nav {
   height: 100vh;
   background: url(../images/nav_background.jpg), rgba(0, 0, 0, 0.479);
   background-blend-mode: multiply;
+  border-right: 5px solid rgb(42, 90, 117);
   background-size: cover;
   transform: translateX(-16em);
 }

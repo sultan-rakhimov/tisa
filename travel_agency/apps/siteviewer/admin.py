@@ -1,5 +1,5 @@
 from django.contrib import admin
-from siteviewer.models import Slide, Customer
+from .models import Slide, Customer, Country, Tour
 
 
 class SlideAdmin(admin.ModelAdmin):
@@ -10,3 +10,5 @@ class SlideAdmin(admin.ModelAdmin):
 
 admin.site.register(Slide, SlideAdmin)
 admin.site.register(Customer)
+admin.site.register(Country)
+admin.site.register(Tour)

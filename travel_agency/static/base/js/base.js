@@ -12,9 +12,16 @@
         main.toggleClass("menu-active");
         nav.removeClass("menu-hover");
         main.removeClass("menu-hover");
-        console.log(open);
     });
+    main.on("click", function () {
+        if (open) {
+            open = false;
+            nav.removeClass("menu-active");
+            main.removeClass("menu-active");
+            console.log('Gotta remove')
+        }
 
+    });
     menu.hover(
         function () {
             if (!open) {

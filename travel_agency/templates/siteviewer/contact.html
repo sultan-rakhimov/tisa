@@ -26,12 +26,8 @@
     <form action="{% url 'customer' %}" method="POST">
       {% csrf_token %}
       <div class="input-box">
-        <input id="first_name" name="first_name" type="text" required />
-        <label for="first_name">First Name</label>
-      </div>
-      <div class="input-box">
-        <input id="last_name" name="last_name" type="text" required />
-        <label for="last_name">Last Name</label>
+        <input id="full_name" name="full_name" type="text" required />
+        <label for="full_name">Full Name</label>
       </div>
       <div class="input-box">
         <input id="email" name="email" type="email" required />

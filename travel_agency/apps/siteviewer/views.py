@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect, reverse
-from django.http import HttpResponse
-from siteviewer.models import Slide, Customer
+from .models import Slide, Customer, Country, Tour
 
 
 def home(request):
@@ -21,7 +20,9 @@ def news(request):
 
 
 def tours(request):
-    return render(request, 'siteviewer/tours.html')
+    countries = Country.objects.all()
+    tours = Tour.objects.all()
+    return render(request, 'siteviewer/tours.html', {'countries': countries, 'tours': tours})
 
 
 def customer(request):
